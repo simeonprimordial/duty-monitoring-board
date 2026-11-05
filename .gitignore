@@ -1,0 +1,13 @@
+# Prometheus and Loki data directories (if stored locally)
+prometheus/data/
+loki/data/
+
+# Docker local volumes
+*_data/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

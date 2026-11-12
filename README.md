@@ -1,6 +1,6 @@
 # Duty Monitoring Board
 
-A beginner-level SRE/DevOps project implementing a full observability stack using Docker Compose.
+A SRE/DevOps project implementing a full observability stack using Docker Compose.
 
 ## Stack
 - **Prometheus**: Metrics collection and alerting

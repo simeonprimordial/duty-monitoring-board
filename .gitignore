@@ -9,5 +9,11 @@ loki/data/
 *.log
 
 # OS generated files
+*.db
+*.sqlite3
 .DS_Store
 Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -1,9 +1,19 @@
 # Duty Monitoring Board
 
-A SRE/DevOps project featuring a Grafana board with Prometheus alerts and LogQL panels for traffic, database, and node health.
+A beginner-level SRE/DevOps project implementing a full observability stack using Docker Compose.
 
 ## Stack
-- **Metrics**: Prometheus, Node Exporter, Postgres Exporter, Nginx Exporter
-- **Logs**: Loki, Promtail
-- **Visualization**: Grafana
-- **Infrastructure**: Docker Compose
+- **Prometheus**: Metrics collection and alerting
+- **Loki**: Log aggregation
+- **Promtail**: Docker log collection
+- **Grafana**: Dashboards and alert management
+- **Exporters**: Node, PostgreSQL, and Nginx
+
+## Quick Start
+```bash
+docker-compose up -d
+
+## Access Points
+Grafana: http://localhost:3000 (admin/admin)
+Prometheus: http://localhost:9090
+Loki: http://localhost:3100

@@ -50,7 +50,7 @@ services:
     image: postgres:15
     container_name: postgres
     environment:
-      POSTGREhhhuuS_USER: admin
+      POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: monitor_db
 

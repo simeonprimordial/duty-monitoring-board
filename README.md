@@ -23,31 +23,9 @@ The stack is orchestrated with Docker Compose and combines metrics collection, l
 
 ## Architecture
 
-At a high level, metrics and logs follow separate collection paths:
+The diagram below shows the deployed Duty Monitoring Board dashboard and how the observability components fit together.
 
-- **Metrics:** Exporters expose metrics for Prometheus to scrape. Grafana queries Prometheus to visualise those metrics.
-- **Logs:** Promtail collects container logs and ships them to Loki. Grafana queries Loki when logs need to be explored.
-
-```text
-                 ┌──────────────────────┐
-                 │       Grafana        │
-                 │  Dashboards / Explore│
-                 └──────────┬───────────┘
-                            │
-                  ┌─────────┴─────────┐
-                  │                   │
-            ┌─────▼─────┐       ┌─────▼─────┐
-            │Prometheus │       │   Loki    │
-            │  Metrics  │       │   Logs    │
-            └─────▲─────┘       └─────▲─────┘
-                  │                   │
-          ┌───────┴────────┐     ┌────┴──────┐
-          │ Exporters      │     │ Promtail  │
-          │ Node / Postgres│     │           │
-          │ / Nginx        │     └─────▲─────┘
-          └────────────────┘           │
-                                  Container logs
-```
+![Duty Monitoring Board architecture and monitoring dashboard](screenshots/Duty%20Monitoring%20Board.png)
 
 ## Prerequisites
 
